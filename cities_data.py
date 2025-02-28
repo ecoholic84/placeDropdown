@@ -1,3 +1,26 @@
+# views.py
+
+# def insert_cities_to_db():
+#     count = 0
+#     for city in cities_data:
+#         try:
+#             state = tbl_state.objects.get(id=city["state_id"])  # Fetch state
+#             obj, created = tbl_city.objects.get_or_create(
+#                 name=city["name"],
+#                 state=state
+#             )
+#             if created:
+#                 count += 1
+#         except tbl_state.DoesNotExist:
+#             print(f"Skipping {city['name']} as state_id {city['state_id']} not found")
+#     print(f"Inserted {count} new cities into the database")
+
+# models.py
+
+# class tbl_city(models.Model):
+#     name = models.CharField(max_length=100)
+#     state = models.ForeignKey(tbl_state, on_delete=models.CASCADE)
+
 cities_data = [
 {"id": 1, "name": "Bombuflat", "state_id": 1},
 {"id": 2, "name": "Garacharma", "state_id": 1},
